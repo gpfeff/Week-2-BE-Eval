@@ -30,8 +30,6 @@ end
 
 
 
-
-
 describe Tennis::Player do
   let(:player) do
     player = Tennis::Player.new
