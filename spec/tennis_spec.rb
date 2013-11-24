@@ -28,9 +28,6 @@ describe Tennis::Game do
   end
 end
 
-
-
-
 describe Tennis::Player do
   let(:player) do
     player = Tennis::Player.new
@@ -81,8 +78,16 @@ describe Tennis::Player do
         player.points = 3 
 
       expect(player.score).to eq('forty')
-
     end
   end
+
+    context 'when both player points is 3 or more' do
+      it 'returns deuce' do
+        player1.points >= 3 && player2.points >= 3
+
+      expect(player.score).to eq('deuce')
+    end
+  end
+
 end
 end
