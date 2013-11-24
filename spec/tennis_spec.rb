@@ -90,5 +90,15 @@ describe Tennis::Player do
     end
   end
 
+    context 'when both players score at least 3, and a player has one more point than his opponent' do
+      it 'returns advantage' do
+        player.points = 4
+        player.opponent.points = 5
+
+      expect(player.score).to eq('advantage')
+    end
+  end
+
+
 end
 end
