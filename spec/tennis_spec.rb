@@ -99,6 +99,24 @@ describe Tennis::Player do
     end
   end
 
+  context 'Player wins the game after reaching deuce' do
+      it 'returns winner!' do
+        player.points = 6
+        player.opponent.points = 4
+
+      expect(player.score).to eq('winner!')
+    end
+  end
+
+    context 'Player wins the game, no deuce is reached' do
+      it 'returns winner!' do
+        player.points = 4
+        player.opponent.points = 2
+
+      expect(player.score).to eq('winner!')
+    end
+  end
+
 
 end
 end
