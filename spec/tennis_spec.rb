@@ -83,7 +83,8 @@ describe Tennis::Player do
 
     context 'when both player points is 3 or more' do
       it 'returns deuce' do
-        player1.points >= 3 && player2.points >= 3
+        player.points = 4
+        player.opponent.points = 4
 
       expect(player.score).to eq('deuce')
     end
