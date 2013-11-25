@@ -117,6 +117,15 @@ describe Tennis::Player do
     end
   end
 
+  # context 'Player wins a set' do
+  #     it 'returns sets won' do
+  #       player.score = 4
+  #       player.opponent.points = 1
+
+  #     expect(player.sets_won).to eq(1)
+  #   end
+  # end
+
 
 end
 end
